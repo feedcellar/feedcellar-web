@@ -6,6 +6,10 @@ Feedcellar::Web is a Web interface for [Feedcellar][] that is full-text searchab
 
 [Feedcellar]:http://myokoym.net/feedcellar/
 
+## Demo
+
+http://myokoym.net/feedcellar-demo/
+
 ## Installation
 
     $ gem install feedcellar-web
