@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.version       = Feedcellar::Web::VERSION
   spec.authors       = ["Masafumi Yokoyama"]
   spec.email         = ["myokoym@gmail.com"]
-  spec.description   = %q{Feedcellar::Web is a Web interfface for Feedcellar that is a full-text searchable RSS feed reader and data store by Groonga (via Rroonga) with Ruby.}
+  spec.description   = %q{Web interface for Feedcellar is a full-text searchable RSS feed reader by Rroonga.}
   spec.summary       = %q{Web interface for Feedcellar}
   spec.homepage      = "http://myokoym.net/feedcellar/"
   spec.license       = "LGPLv2.1 or later"
