@@ -2,14 +2,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/feedcellar-web.svg)](http://badge.fury.io/rb/feedcellar-web)
 
-Feedcellar::Web is a Web interface for Feedcellar that is full-text searchable RSS feed reader and data store.
-
-Powered by [Feedcellar][] and [Groonga][] (via [Rroonga][]) with [Ruby][].
+Feedcellar::Web is a Web interface for [Feedcellar][] that is full-text searchable RSS feed reader and data store.
 
 [Feedcellar]:http://myokoym.net/feedcellar/
-[Groonga]:http://groonga.org/
-[Rroonga]:http://ranguba.org/#about-rroonga
-[Ruby]:https://www.ruby-lang.org/
 
 ## Installation
 
