@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    feedcellar-web (0.1.0)
-      feedcellar (>= 0.5.0)
+    feedcellar-web (0.1.1)
+      feedcellar (>= 0.6.0)
       haml
       kaminari
       launchy
@@ -38,14 +38,8 @@ GEM
       io-like (~> 0.3.0)
     builder (3.2.2)
     erubis (2.7.0)
-    feedcellar (0.5.0)
-      haml
-      kaminari
-      launchy
-      padrino-helpers
-      racknga
-      rroonga (>= 3.0.4)
-      sinatra
+    feedcellar (0.6.0)
+      rroonga (>= 5.0.0)
       thor
     gqtp (1.0.6)
     groonga-client (0.1.0)
