@@ -24,7 +24,7 @@
       - month = group.key
       - if month == 0
         - next
-      = link_to("#{"%02d" % month} (#{group.n_sub_records})",
+      = link_to("#{month} (#{group.n_sub_records})",
                 url("/search?word=#{params[:word]}&month=#{month}"))
   %p
     - @feeds.group(["year", "month"]).each do |group|
