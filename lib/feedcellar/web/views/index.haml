@@ -15,6 +15,11 @@
           = link_to("#{feed.title} - #{feed.resource.title}", feed.link)
   = paginate(@paginated_feeds)
   %p
+    - @feeds.group("year").each do |group|
+      - year = group.key
+      = link_to("#{"%04d" % year}",
+                url("/search?word=#{params[:word]}&year=#{year}"))
+  %p
     - @feeds.group(["year", "month"]).each do |groups|
       - sub_record = groups.sub_records.first
       - year = sub_record.year
