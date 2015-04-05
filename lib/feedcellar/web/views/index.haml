@@ -20,7 +20,7 @@
       = link_to("#{"%04d" % year} (#{group.n_sub_records})",
                 url("/search?word=#{params[:word]}&year=#{year}"))
   %p
-    - @feeds.group("month").each do |group|
+    - @feeds.group("month").sort_by {|record| record.key}.each do |group|
       - month = group.key
       = link_to("#{"%02d" % month} (#{group.n_sub_records})",
                 url("/search?word=#{params[:word]}&month=#{month}"))
