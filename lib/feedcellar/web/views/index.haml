@@ -17,17 +17,17 @@
   %p
     - @feeds.group("year").each do |group|
       - year = group.key
-      = link_to("#{"%04d" % year}",
+      = link_to("#{"%04d" % year} (#{group.n_sub_records})",
                 url("/search?word=#{params[:word]}&year=#{year}"))
   %p
     - @feeds.group("month").each do |group|
       - month = group.key
-      = link_to("#{"%02d" % month}",
+      = link_to("#{"%02d" % month} (#{group.n_sub_records})",
                 url("/search?word=#{params[:word]}&month=#{month}"))
   %p
     - @feeds.group(["year", "month"]).each do |group|
       - sub_record = group.sub_records.first
       - year = sub_record.year
       - month = sub_record.month
-      = link_to("#{"%04d" % year}-#{"%02d" % month}",
+      = link_to("#{"%04d" % year}-#{"%02d" % month} (#{group.n_sub_records})",
                 url("/search?word=#{params[:word]}&year=#{year}&month=#{month}"))
