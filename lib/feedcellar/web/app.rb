@@ -39,6 +39,8 @@ module Feedcellar
         end
         options ||= {}
         options[:resource_id] = params[:resource_id] if params[:resource_id]
+        options[:year] = params[:year].to_i if params[:year]
+        options[:month] = params[:month].to_i if params[:month]
         @feeds = search(words, options)
         if @feeds
           page = params[:page]
