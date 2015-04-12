@@ -1,13 +1,13 @@
 %h1 feedcellar-web
-= render :_versions
-= render :_search_form
+= render :_versions, layout: false
+= render :_search_form, layout: false
 - if @feeds
   %p
-    = render :_resources
-  = render :_feeds
+    = render :_resources, layout: false
+  = render :_feeds, layout: false
   %p
-    = render :_years
+    = render :_years, layout: false
   %p
-    = render :_months_by_years
+    = render :_months_by_years, layout: false
   %p
-    = render :_months
+    = render :_months, layout: false
