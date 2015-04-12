@@ -1,6 +1,5 @@
 .container
   %h1 feedcellar-web
-  = render :_versions, layout: false
   = render :_search_form, layout: false
   - if @feeds
     .row
@@ -15,3 +14,5 @@
           = render :_months_by_years, layout: false
         %p
           = render :_months, layout: false
+#footer.container
+  = render :_versions, layout: false
