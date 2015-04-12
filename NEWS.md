@@ -1,5 +1,16 @@
 # NEWS
 
+## 0.3.1: 2015-04-13
+
+Bug fix release for 0.3.0.
+
+### Changes
+
+#### Fixes
+
+* Don't use abstract path for sub URL.
+* Hide GitHub ribbon when narrow width.
+
 ## 0.3.0: 2015-04-12
 
 ### Changes
