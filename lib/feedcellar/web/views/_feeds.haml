@@ -1,0 +1,8 @@
+= paginate(@paginated_feeds)
+%ul
+  - @paginated_feeds.each do |feed|
+    %li
+      %p
+        = feed.date.strftime("%Y-%m-%d")
+        = link_to("#{feed.title} - #{feed.resource.title}", feed.link)
+= paginate(@paginated_feeds)
