@@ -1,5 +1,19 @@
 # NEWS
 
+## 0.3.0: 2015-04-12
+
+### Changes
+
+#### Improvements
+
+* Extracted view files.
+* Introduced Bootstrap 3.3.4.
+* Added .container.
+* Use row grid.
+* Extracted #footer.
+* footer: Align right.
+* Extracted #header.
+
 ## 0.2.0: 2015-04-06
 
 ### Changes
