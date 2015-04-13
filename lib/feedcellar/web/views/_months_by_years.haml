@@ -4,3 +4,4 @@
   - month = sub_record.month
   = link_to("#{"%04d" % year}-#{"%02d" % month} (#{group.n_sub_records})",
             url("/search?word=#{params[:word]}&year=#{year}&month=#{month}"))
+  %br
