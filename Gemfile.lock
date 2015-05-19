@@ -42,7 +42,7 @@ GEM
       rroonga (>= 5.0.0)
       thor
     gqtp (1.0.6)
-    groonga-client (0.1.1)
+    groonga-client (0.1.2)
       gqtp (>= 1.0.4)
       groonga-command (>= 1.0.8)
       groonga-command-parser
@@ -61,7 +61,7 @@ GEM
       activesupport (>= 3.0.0)
     launchy (2.4.3)
       addressable (~> 2.3)
-    loofah (2.0.1)
+    loofah (2.0.2)
       nokogiri (>= 1.5.9)
     mini_portile (0.6.2)
     minitest (5.6.1)
@@ -75,7 +75,7 @@ GEM
       activesupport (>= 3.1)
     pkg-config (1.1.6)
     power_assert (0.2.3)
-    rack (1.6.0)
+    rack (1.6.1)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -93,7 +93,7 @@ GEM
       loofah (~> 2.0)
     rake (10.4.2)
     rr (1.1.2)
-    rroonga (5.0.1)
+    rroonga (5.0.2)
       archive-zip
       groonga-client (>= 0.0.3)
       json
