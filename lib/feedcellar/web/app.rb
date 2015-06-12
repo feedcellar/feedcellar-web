@@ -32,6 +32,21 @@ module Feedcellar
       end
 
       get "/search" do
+        search_and_paginate
+        haml :index
+      end
+
+      get "/registers.opml" do
+        content_type :xml
+        opml = nil
+        GroongaDatabase.new.open(Command.new.database_dir) do |database|
+          opml = Opml.build(database.resources.records)
+        end
+        opml
+      end
+
+      helpers do
+        def search_and_paginate
         if params[:word]
           words = params[:word].split(" ")
         else
@@ -47,19 +62,8 @@ module Feedcellar
           n_per_page = options[:n_per_page] || 50
           @paginated_feeds = pagenate_feeds(@feeds, page, n_per_page)
         end
-        haml :index
-      end
-
-      get "/registers.opml" do
-        content_type :xml
-        opml = nil
-        GroongaDatabase.new.open(Command.new.database_dir) do |database|
-          opml = Opml.build(database.resources.records)
         end
-        opml
-      end
 
-      helpers do
         def search(words, options={})
           database = GroongaDatabase.new
           database.open(Command.new.database_dir)
