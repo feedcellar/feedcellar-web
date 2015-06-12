@@ -18,6 +18,7 @@
 
 require "feedcellar"
 require "sinatra/base"
+require "sinatra/json"
 require "haml"
 require "padrino-helpers"
 require "kaminari/sinatra"
@@ -34,6 +35,11 @@ module Feedcellar
       get "/search" do
         search_and_paginate
         haml :index
+      end
+
+      get "/search.json" do
+        search_and_paginate
+        json @paginated_feeds.collect {|feed| feed.attributes }
       end
 
       get "/registers.opml" do
