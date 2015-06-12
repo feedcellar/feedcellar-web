@@ -16,4 +16,9 @@ class AppTest < Test::Unit::TestCase
     get "/search"
     assert_true(last_response.ok?)
   end
+
+  def test_registers
+    get "/registers.opml"
+    assert_true(last_response.ok?)
+  end
 end
