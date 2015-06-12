@@ -11,4 +11,9 @@ class AppTest < Test::Unit::TestCase
     get "/"
     assert_true(last_response.ok?)
   end
+
+  def test_search
+    get "/search"
+    assert_true(last_response.ok?)
+  end
 end
