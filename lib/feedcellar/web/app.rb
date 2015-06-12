@@ -47,21 +47,21 @@ module Feedcellar
 
       helpers do
         def search_and_paginate
-        if params[:word]
-          words = params[:word].split(" ")
-        else
-          words = []
-        end
-        options ||= {}
-        options[:resource_id] = params[:resource_id] if params[:resource_id]
-        options[:year] = params[:year].to_i if params[:year]
-        options[:month] = params[:month].to_i if params[:month]
-        @feeds = search(words, options)
-        if @feeds
-          page = params[:page]
-          n_per_page = options[:n_per_page] || 50
-          @paginated_feeds = pagenate_feeds(@feeds, page, n_per_page)
-        end
+          if params[:word]
+            words = params[:word].split(" ")
+          else
+            words = []
+          end
+          options ||= {}
+          options[:resource_id] = params[:resource_id] if params[:resource_id]
+          options[:year] = params[:year].to_i if params[:year]
+          options[:month] = params[:month].to_i if params[:month]
+          @feeds = search(words, options)
+          if @feeds
+            page = params[:page]
+            n_per_page = options[:n_per_page] || 50
+            @paginated_feeds = pagenate_feeds(@feeds, page, n_per_page)
+          end
         end
 
         def search(words, options={})
