@@ -19,6 +19,7 @@
 require "feedcellar"
 require "sinatra/base"
 require "sinatra/json"
+require "sinatra/cross_origin"
 require "haml"
 require "padrino-helpers"
 require "kaminari/sinatra"
@@ -27,6 +28,7 @@ module Feedcellar
   module Web
     class App < Sinatra::Base
       helpers Kaminari::Helpers::SinatraHelpers
+      register Sinatra::CrossOrigin
 
       get "/" do
         haml :index
@@ -38,6 +40,7 @@ module Feedcellar
       end
 
       get "/search.json" do
+        cross_origin
         search_and_paginate
         json @paginated_feeds.collect {|feed| feed.attributes }
       end

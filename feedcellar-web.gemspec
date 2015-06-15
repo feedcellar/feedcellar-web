@@ -41,6 +41,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency("thor")
   spec.add_runtime_dependency("sinatra")
   spec.add_runtime_dependency("sinatra-contrib")
+  spec.add_runtime_dependency("sinatra-cross_origin")
   spec.add_runtime_dependency("padrino-helpers")
   spec.add_runtime_dependency("kaminari")
   spec.add_runtime_dependency("haml")
