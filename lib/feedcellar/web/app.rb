@@ -42,7 +42,8 @@ module Feedcellar
       get "/search.json" do
         cross_origin
         search_and_paginate
-        json @paginated_feeds.collect {|feed| feed.attributes }
+        feeds = @paginated_feeds || @feeds
+        json feeds.collect {|feed| feed.attributes }
       end
 
       get "/registers.opml" do
@@ -66,7 +67,7 @@ module Feedcellar
           options[:year] = params[:year].to_i if params[:year]
           options[:month] = params[:month].to_i if params[:month]
           @feeds = search(words, options)
-          if @feeds
+          if @feeds and params[:page]
             page = params[:page]
             n_per_page = options[:n_per_page] || 50
             @paginated_feeds = pagenate_feeds(@feeds, page, n_per_page)
