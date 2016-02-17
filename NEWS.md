@@ -1,5 +1,17 @@
 # NEWS
 
+## 0.4.3: 2016-02-17
+
+### Changes
+
+#### Improvements
+
+* Used the latest Feedcellar.
+
+#### Fixed
+
+* Don't paginate drilldown source.
+
 ## 0.4.2: 2016-02-17
 
 ### Changes
