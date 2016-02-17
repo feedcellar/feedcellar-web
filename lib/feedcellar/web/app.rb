@@ -80,8 +80,8 @@ module Feedcellar
           page = (params[:page] || 1).to_i
           size = (params[:n_per_page] || 50).to_i
           @paginated_feeds = @feeds.paginate([["date", :desc]],
-                                   page: page,
-                                   size: size)
+                                             page: page,
+                                             size: size)
           @paginated_feeds.extend(PaginationProxy)
           @paginated_feeds
         end
