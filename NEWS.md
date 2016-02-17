@@ -1,5 +1,13 @@
 # NEWS
 
+## 0.4.1: 2016-02-17
+
+### Changes
+
+#### Improvements
+
+* Updated gems.
+
 ## 0.4.0: 2016-02-17
 
 ### Changes
