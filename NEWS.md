@@ -6,7 +6,7 @@
 
 #### Improvements
 
-* Used the latest Feedcellar.
+* Used the latest Feedcellar to support "OR" operator.
 
 #### Fixed
 
