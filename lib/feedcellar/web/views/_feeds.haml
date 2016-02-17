@@ -1,10 +1,10 @@
-- if @feeds.total_pages > 1
-  = paginate(@feeds)
+- if @paginated_feeds.total_pages > 1
+  = paginate(@paginated_feeds)
 %ul
-  - @feeds.each do |feed|
+  - @paginated_feeds.each do |feed|
     %li
       %p
         = feed.date.strftime("%Y-%m-%d")
         = link_to("#{feed.title} - #{feed.resource.title}", feed.link)
-- if @feeds.total_pages > 1
-  = paginate(@feeds)
+- if @paginated_feeds.total_pages > 1
+  = paginate(@paginated_feeds)

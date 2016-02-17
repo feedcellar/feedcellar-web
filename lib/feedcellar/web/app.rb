@@ -79,11 +79,11 @@ module Feedcellar
           @feeds = search(words, options)
           page = (params[:page] || 1).to_i
           size = (params[:n_per_page] || 50).to_i
-          @feeds = @feeds.paginate([["date", :desc]],
+          @paginated_feeds = @feeds.paginate([["date", :desc]],
                                    page: page,
                                    size: size)
-          @feeds.extend(PaginationProxy)
-          @feeds
+          @paginated_feeds.extend(PaginationProxy)
+          @paginated_feeds
         end
 
         def search(words, options={})
