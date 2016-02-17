@@ -41,7 +41,7 @@ GEM
     backports (3.6.8)
     builder (3.2.2)
     erubis (2.7.0)
-    feedcellar (0.7.0)
+    feedcellar (0.7.1)
       parallel
       rroonga (>= 5.0.0)
       thor
