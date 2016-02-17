@@ -1,5 +1,18 @@
 # NEWS
 
+## 0.4.0: 2016-02-17
+
+### Changes
+
+#### Improvements
+
+* Add space between resources and years.
+* Break by years.
+* Break by months by years.
+* Added /search.json route.
+* Supported CORS.
+* Don't paginate unless params[:page] is specified.
+
 ## 0.3.1: 2015-04-13
 
 Bug fix release for 0.3.0.
