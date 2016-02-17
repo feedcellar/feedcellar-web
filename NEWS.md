@@ -1,5 +1,14 @@
 # NEWS
 
+## 0.4.2: 2016-02-17
+
+### Changes
+
+#### Improvements
+
+* Always paginate without "page" parameter.
+* Paginate in Rroonga.
+
 ## 0.4.1: 2016-02-17
 
 ### Changes
