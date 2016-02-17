@@ -26,6 +26,16 @@ require "kaminari/sinatra"
 
 module Feedcellar
   module Web
+    module PaginationProxy
+      def limit_value
+        page_size
+      end
+
+      def total_pages
+        n_pages
+      end
+    end
+
     class App < Sinatra::Base
       helpers Kaminari::Helpers::SinatraHelpers
       register Sinatra::CrossOrigin
@@ -67,21 +77,19 @@ module Feedcellar
           options[:year] = params[:year].to_i if params[:year]
           options[:month] = params[:month].to_i if params[:month]
           @feeds = search(words, options)
-          if @feeds and params[:page]
-            page = params[:page]
-            n_per_page = options[:n_per_page] || 50
-            @paginated_feeds = pagenate_feeds(@feeds, page, n_per_page)
-          end
+          page = (params[:page] || 1).to_i
+          size = (params[:n_per_page] || 50).to_i
+          @feeds = @feeds.paginate([["date", :desc]],
+                                   page: page,
+                                   size: size)
+          @feeds.extend(PaginationProxy)
+          @feeds
         end
 
         def search(words, options={})
           database = GroongaDatabase.new
           database.open(Command.new.database_dir)
           GroongaSearcher.search(database, words, options)
-        end
-
-        def pagenate_feeds(feeds, page, n_per_page)
-          Kaminari.paginate_array(feeds.to_a).page(page).per(n_per_page)
         end
 
         def grouping(table)
