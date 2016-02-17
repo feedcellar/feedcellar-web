@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    feedcellar-web (0.4.2)
+    feedcellar-web (0.4.3)
       feedcellar (>= 0.6.0)
       haml
       kaminari
